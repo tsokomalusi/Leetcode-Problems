@@ -1,0 +1,51 @@
+Main goal: move zeros in the array to the back
+
+swapping condition(when to swap): lP == 0  & rP == non zero
+
+The goal here is to let the lP anchor down to a zero with the rP pointing to a non-zero element, then swap
+
+
+when to increment both pointers toward the right? if lP > 0 (usually after swapping)
+
+lP++, rP++
+
+when to let the rP explore, if lP has already anchored down to a zero
+
+if: lp == 0  & rP -> zero , rP++
+
+example1: move zeros
+
+0  1  0  3   12   
+
+^  ^                 <--- swapping condition
+
+1   0  0  3   12
+
+    ^  ^ 
+
+1   0  0  3   12  
+
+    ^     ^    
+
+1   3   0  0   12 
+
+        ^       ^
+
+1   3   12  0   0
+
+
+                 ^       ^  <--- out of bound then we stop!
+
+example2: 
+
+1   3   12  0   0
+
+^  ^               <-- lP>0 so lP++, rP++ (both pointers are incremented)
+1   3   12  0   0
+    ^  ^           <-- same case as before
+1   3   12  0   0  
+         ^  ^      <--- same case as before
+1   3   12  0   0 
+            ^   ^  <--- anchor pointer got a zero, so let the rP exlpore non-zero element (rP++)
+1   3   12  0   0
+            ^      ^  <-- out of bounds , so we stop
