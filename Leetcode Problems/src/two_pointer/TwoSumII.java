@@ -18,33 +18,33 @@ public class TwoSumII {
 	 */
 
 	public static void main(String[] args) {
-		
+
 		int[] arr = {2, 7, 11, 15};
 		int targetVal = 9;
-		
+
 		System.out.print("Input: ");
-		
+
 		for(int it: arr) {
-			
+
 			System.out.print(it + " ");
 		}
-		
+
 		System.out.println("\nTarget: " + targetVal);
-		
+
 		int[] sum = twoSum(arr, targetVal);
-		
+
 		System.out.println("Output ");
-		
-	    for(int it: sum) {
-	    	
-	    	System.out.print(it + " ");
-	    }
-		
+
+		for(int it: sum) {
+
+			System.out.print(it + " ");
+		}
+
 	}
 
 	public static int[] twoSum(int[] numbers, int targetSum) {
 
-		//Definining the pointers
+		//Defining the pointers
 		int leftP = 0, n = numbers.length, rightP = n - 1;
 
 		//use the pointers to find the sum equivalent to the target sum

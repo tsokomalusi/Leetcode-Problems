@@ -34,7 +34,7 @@ public class MoveZeros {
 		if(len < 2)
 			return;
 
-		//definining pointers
+		//defining pointers
 
 		int lP = 0, rP = 1;
 
